@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8">
+  <title>Sudoku solver</title>
+</head>
+
+<body>
+  <center>
+    <h1 class="top" align="center"><b>Sudoku solver</b></h1>
+    <table class="sudoku">
+      <tr>
+        <td>
+          <table class="minitable">
+            <tr>
+              <td class="cell"><input class="cellinput" type="number" id="aa" value="" max="9" min="1" step="1" default="0"></td>
+              <td class="cell"><input class="cellinput" type="number" id="ab" value="" max="9" min="1" step="1" default="0"></td>
+              <td class="cell"><input class="cellinput" type="number" id="ac" value="" max="9" min="1" step="1" default="0"></td>
+            </tr>
+            <tr>
+              <td class="cell"><input class="cellinput" type="number" id="ba" value="" max="9" min="1" step="1" default="0"></td>
+              <td class="cell"><input class="cellinput" type="number" id="bb" value="" max="9" min="1" step="1" default="0"></td>
+              <td class="cell"><input class="cellinput" type="number" id="bc" value="" max="9" min="1" step="1" default="0"></td>
+            </tr>
+            <tr>
+              <td class="cell"><input class="cellinput" type="number" id="ca" value="" max="9" min="1" step="1" default="0"></td>
+              <td class="cell"><input class="cellinput" type="number" id="cb" value="" max="9" min="1" step="1" default="0"></td>
+              <td class="cell"><input class="cellinput" type="number" id="cc" value="" max="9" min="1" step="1" default="0"></td>
+            </tr>
+          </table>
+        </td>
+        <td>
+          <table class="minitable">
+            <tr>
+              <td class="cell"><input class="cellinput" type="number" id="ad" value="" max="9" min="1" step="1" default="0"></td>
+              <td class="cell"><input class="cellinput" type="number" id="ae" value="" max="9" min="1" step="1" default="0"></td>
+              <td class="cell"><input class="cellinput" type="number" id="af" value="" max="9" min="1" step="1" default="0"></td>
+            </tr>
+            <tr>
+              <td class="cell"><input class="cellinput" type="number" id="bd" value="" max="9" min="1" step="1" default="0"></td>
+              <td class="cell"><input class="cellinput" type="number" id="be" value="" max="9" min="1" step="1" default="0"></td>
+              <td class="cell"><input class="cellinput" type="number" id="bf" value="" max="9" min="1" step="1" default="0"></td>
+            </tr>
+            <tr>
+              <td class="cell"><input class="cellinput" type="number" id="cd" value="" max="9" min="1" step="1" default="0"></td>
+              <td class="cell"><input class="cellinput" type="number" id="ce" value="" max="9" min="1" step="1" default="0"></td>
+              <td class="cell"><input class="cellinput" type="number" id="cf" value="" max="9" min="1" step="1" default="0"></td>
+            </tr>
+          </table>
+        </td>
+        <td>
+          <table class="minitable">
+            <tr>
+              <td class="cell"><input class="cellinput" type="number" id="ag" value="" max="9" min="1" step="1" default="0"></td>
+              <td class="cell"><input class="cellinput" type="number" id="ah" value="" max="9" min="1" step="1" default="0"></td>
+              <td class="cell"><input class="cellinput" type="number" id="ai" value="" max="9" min="1" step="1" default="0"></td>
+            </tr>
+            <tr>
+              <td class="cell"><input class="cellinput" type="number" id="bg" value="" max="9" min="1" step="1" default="0"></td>
+              <td class="cell"><input class="cellinput" type="number" id="bh" value="" max="9" min="1" step="1" default="0"></td>
+              <td class="cell"><input class="cellinput" type="number" id="bi" value="" max="9" min="1" step="1" default="0"></td>
+            </tr>
+            <tr>
+              <td class="cell"><input class="cellinput" type="number" id="cg" value="" max="9" min="1" step="1" default="0"></td>
+              <td class="cell"><input class="cellinput" type="number" id="ch" value="" max="9" min="1" step="1" default="0"></td>
+              <td class="cell"><input class="cellinput" type="number" id="ci" value="" max="9" min="1" step="1" default="0"></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <table class="minitable">
+            <tr>
+              <td class="cell"><input class="cellinput" type="number" id="da" value="" max="9" min="1" step="1" default="0"></td>
+              <td class="cell"><input class="cellinput" type="number" id="db" value="" max="9" min="1" step="1" default="0"></td>
+              <td class="cell"><input class="cellinput" type="number" id="dc" value="" max="9" min="1" step="1" default="0"></td>
+            </tr>
+            <tr>
+              <td class="cell"><input class="cellinput" type="number" id="ea" value="" max="9" min="1" step="1" default="0"></td>
+              <td class="cell"><input class="cellinput" type="number" id="eb" value="" max="9" min="1" step="1" default="0"></td>
+              <td class="cell"><input class="cellinput" type="number" id="ec" value="" max="9" min="1" step="1" default="0"></td>
+            </tr>
+            <tr>
+              <td class="cell"><input class="cellinput" type="number" id="fa" value="" max="9" min="1" step="1" default="0"></td>
+              <td class="cell"><input class="cellinput" type="number" id="fb" value="" max="9" min="1" step="1" default="0"></td>
+              <td class="cell"><input class="cellinput" type="number" id="fc" value="" max="9" min="1" step="1" default="0"></td>
+            </tr>
+          </table>
+        </td>
+        <td>
+          <table class="minitable">
+            <tr>
+              <td class="cell"><input class="cellinput" type="number" id="dd" value="" max="9" min="1" step="1" default="0"></td>
+              <td class="cell"><input class="cellinput" type="number" id="de" value="" max="9" min="1" step="1" default="0"></td>
+              <td class="cell"><input class="cellinput" type="number" id="df" value="" max="9" min="1" step="1" default="0"></td>
+            </tr>
+            <tr>
+              <td class="cell"><input class="cellinput" type="number" id="ed" value="" max="9" min="1" step="1" default="0"></td>
+              <td class="cell"><input class="cellinput" type="number" id="ee" value="" max="9" min="1" step="1" default="0"></td>
+              <td class="cell"><input class="cellinput" type="number" id="ef" value="" max="9" min="1" step="1" default="0"></td>
+            </tr>
+            <tr>
+              <td class="cell"><input class="cellinput" type="number" id="fd" value="" max="9" min="1" step="1" default="0"></td>
+              <td class="cell"><input class="cellinput" type="number" id="fe" value="" max="9" min="1" step="1" default="0"></td>
+              <td class="cell"><input class="cellinput" type="number" id="ff" value="" max="9" min="1" step="1" default="0"></td>
+            </tr>
+          </table>
+        </td>
+        <td>
+          <table class="minitable">
+            <tr>
+              <td class="cell"><input class="cellinput" type="number" id="dg" value="" max="9" min="1" step="1" default="0"></td>
+              <td class="cell"><input class="cellinput" type="number" id="dh" value="" max="9" min="1" step="1" default="0"></td>
+              <td class="cell"><input class="cellinput" type="number" id="di" value="" max="9" min="1" step="1" default="0"></td>
+            </tr>
+            <tr>
+              <td class="cell"><input class="cellinput" type="number" id="eg" value="" max="9" min="1" step="1" default="0"></td>
+              <td class="cell"><input class="cellinput" type="number" id="eh" value="" max="9" min="1" step="1" default="0"></td>
+              <td class="cell"><input class="cellinput" type="number" id="ei" value="" max="9" min="1" step="1" default="0"></td>
+            </tr>
+            <tr>
+              <td class="cell"><input class="cellinput" type="number" id="fg" value="" max="9" min="1" step="1" default="0"></td>
+              <td class="cell"><input class="cellinput" type="number" id="fh" value="" max="9" min="1" step="1" default="0"></td>
+              <td class="cell"><input class="cellinput" type="number" id="fi" value="" max="9" min="1" step="1" default="0"></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <table class="minitable">
+            <tr>
+              <td class="cell"><input class="cellinput" type="number" id="ga" value="" max="9" min="1" step="1" default="0"></td>
+              <td class="cell"><input class="cellinput" type="number" id="gb" value="" max="9" min="1" step="1" default="0"></td>
+              <td class="cell"><input class="cellinput" type="number" id="gc" value="" max="9" min="1" step="1" default="0"></td>
+            </tr>
+            <tr>
+              <td class="cell"><input class="cellinput" type="number" id="ha" value="" max="9" min="1" step="1" default="0"></td>
+              <td class="cell"><input class="cellinput" type="number" id="hb" value="" max="9" min="1" step="1" default="0"></td>
+              <td class="cell"><input class="cellinput" type="number" id="hc" value="" max="9" min="1" step="1" default="0"></td>
+            </tr>
+            <tr>
+              <td class="cell"><input class="cellinput" type="number" id="ia" value="" max="9" min="1" step="1" default="0"></td>
+              <td class="cell"><input class="cellinput" type="number" id="ib" value="" max="9" min="1" step="1" default="0"></td>
+              <td class="cell"><input class="cellinput" type="number" id="ic" value="" max="9" min="1" step="1" default="0"></td>
+            </tr>
+          </table>
+        </td>
+        <td>
+          <table class="minitable">
+            <tr>
+              <td class="cell"><input class="cellinput" type="number" id="gd" value="" max="9" min="1" step="1" default="0"></td>
+              <td class="cell"><input class="cellinput" type="number" id="ge" value="" max="9" min="1" step="1" default="0"></td>
+              <td class="cell"><input class="cellinput" type="number" id="gf" value="" max="9" min="1" step="1" default="0"></td>
+            </tr>
+            <tr>
+              <td class="cell"><input class="cellinput" type="number" id="hd" value="" max="9" min="1" step="1" default="0"></td>
+              <td class="cell"><input class="cellinput" type="number" id="he" value="" max="9" min="1" step="1" default="0"></td>
+              <td class="cell"><input class="cellinput" type="number" id="hf" value="" max="9" min="1" step="1" default="0"></td>
+            </tr>
+            <tr>
+              <td class="cell"><input class="cellinput" type="number" id="id" value="" max="9" min="1" step="1" default="0"></td>
+              <td class="cell"><input class="cellinput" type="number" id="ie" value="" max="9" min="1" step="1" default="0"></td>
+              <td class="cell"><input class="cellinput" type="number" id="if" value="" max="9" min="1" step="1" default="0"></td>
+            </tr>
+          </table>
+        </td>
+        <td>
+          <table class="minitable">
+            <tr>
+              <td class="cell"><input class="cellinput" type="number" id="gg" value="" max="9" min="1" step="1" default="0"></td>
+              <td class="cell"><input class="cellinput" type="number" id="gh" value="" max="9" min="1" step="1" default="0"></td>
+              <td class="cell"><input class="cellinput" type="number" id="gi" value="" max="9" min="1" step="1" default="0"></td>
+            </tr>
+            <tr>
+              <td class="cell"><input class="cellinput" type="number" id="hg" value="" max="9" min="1" step="1" default="0"></td>
+              <td class="cell"><input class="cellinput" type="number" id="hh" value="" max="9" min="1" step="1" default="0"></td>
+              <td class="cell"><input class="cellinput" type="number" id="hi" value="" max="9" min="1" step="1" default="0"></td>
+            </tr>
+            <tr>
+              <td class="cell"><input class="cellinput" type="number" id="ig" value="" max="9" min="1" step="1" default="0"></td>
+              <td class="cell"><input class="cellinput" type="number" id="ih" value="" max="9" min="1" step="1" default="0"></td>
+              <td class="cell"><input class="cellinput" type="number" id="ii" value="" max="9" min="1" step="1" default="0"></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+    <br>
+    <br>
+    <input class="solve" type="button" onclick="onlyfuns()"  value="SOLVE">
+    <script src="main.js" charset="utf-8"></script>
+</body>
+
+</html>
